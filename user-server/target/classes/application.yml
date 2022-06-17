@@ -1,0 +1,37 @@
+server:
+  port: 10001
+spring:
+  datasource:
+    url: jdbc:mysql://101.201.140.42:3306/zt_study?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8&useSSL=false&tinyInt1isBit=false
+    username: root
+    password: 1994@04
+    driver-class-name: com.mysql.jdbc.Driver
+#  application:
+ #   name: userservice #服务名称
+ # cloud:
+  #  nacos:
+   #   server-addr: localhost:8848 #服务地址
+    #  discovery:
+     #   cluster-name: BJ #配置集群名称
+
+  shardingsphere:
+    sharding:
+      default-database-strategy:
+      tables:
+#      discovery:
+#        cluster-name: HZ
+mybatis:
+  type-aliases-package: com.zh.user.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com.zh: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+#eureka:
+#  client:
+#    service-url:  # eureka的地址信息
+#      defaultZone: http://127.0.0.1:10086/eureka
+pattern:
+  name: 本地环境local
